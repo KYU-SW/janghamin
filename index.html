@@ -1,6 +1,450 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<<<<<<< HEAD
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>장하민 | 포트폴리오</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      color: #1a1a2e;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #1a1a2e;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    nav .logo {
+      color: #00d4aa;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+
+    nav ul a:hover { color: #00d4aa; }
+
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: white;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+
+    .hero-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #00d4aa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: #1a1a2e;
+      font-weight: 700;
+      margin: 0 auto 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 span { color: #00d4aa; }
+
+    .hero p.subtitle {
+      font-size: 1.1rem;
+      color: #aaa;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p.mbti {
+      display: inline-block;
+      background: rgba(0,212,170,0.15);
+      border: 1px solid #00d4aa;
+      color: #00d4aa;
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    .hero-btns {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.7rem 1.8rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .btn-primary {
+      background: #00d4aa;
+      color: #1a1a2e;
+    }
+
+    .btn-primary:hover { background: #00b894; }
+
+    .btn-outline {
+      border: 2px solid #00d4aa;
+      color: #00d4aa;
+    }
+
+    .btn-outline:hover {
+      background: #00d4aa;
+      color: #1a1a2e;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #00d4aa;
+      margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .info-list {
+      list-style: none;
+    }
+
+    .info-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .info-list li span {
+      color: #00d4aa;
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      transition: transform 0.3s;
+    }
+
+    .skill-card:hover { transform: translateY(-5px); }
+
+    .skill-card i {
+      font-size: 2rem;
+      color: #00d4aa;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-card p {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    .project-img {
+      height: 160px;
+      background: linear-gradient(135deg, #1a1a2e, #0f3460);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .project-info {
+      padding: 1.2rem;
+    }
+
+    .project-info h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #1a1a2e;
+    }
+
+    .project-info p {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e8faf6;
+      color: #00b894;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 10px;
+      margin: 0.5rem 0.3rem 0 0;
+      font-weight: 600;
+    }
+
+    .contact-box {
+      background: white;
+      border-radius: 16px;
+      padding: 3rem;
+      text-align: center;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    }
+
+    .contact-box p {
+      color: #666;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #1a1a2e;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.6rem 1.2rem;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .contact-links a:hover {
+      border-color: #00d4aa;
+      color: #00d4aa;
+    }
+
+    footer {
+      background: #1a1a2e;
+      color: #aaa;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">JHM</div>
+  <ul>
+    <li><a href="#about">소개</a></li>
+    <li><a href="#skills">스킬</a></li>
+    <li><a href="#projects">프로젝트</a></li>
+    <li><a href="#contact">연락처</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-avatar">장</div>
+  <h1>안녕하세요, <span>장하민</span>입니다</h1>
+  <p class="subtitle">건양대학교 국방XR학부</p>
+  <p class="mbti">ISTP</p>
+  <div class="hero-btns">
+    <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
+    <a href="#contact" class="btn btn-outline">연락하기</a>
+  </div>
+</div>
+
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>안녕하세요! 건양대학교 국방XR학부에 재학 중인 장하민입니다.</p>
+      <p>실용적이고 분석적인 ISTP 성격으로, 직접 만들고 실험하면서 배우는 것을 즐깁니다. XR(확장현실) 기술과 국방 분야의 융합에 관심이 많습니다.</p>
+    </div>
+    <ul class="info-list">
+      <li><span>이름</span> 장하민</li>
+      <li><span>학교</span> 건양대학교</li>
+      <li><span>학부</span> 국방XR학부</li>
+      <li><span>MBTI</span> ISTP</li>
+      <li><span>관심분야</span> XR / 국방 기술</li>
+    </ul>
+  </div>
+</section>
+
+<section id="skills" style="background: #f5f7fa; max-width: 100%; padding: 5rem 2rem;">
+  <div style="max-width: 900px; margin: 0 auto;">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class="fa-brands fa-python"></i>
+        <p>Python</p>
+      </div>
+      <div class="skill-card">
+        <i class="fa-brands fa-unity"></i>
+        <p>Unity</p>
+      </div>
+      <div class="skill-card">
+        <i class="fa-brands fa-html5"></i>
+        <p>HTML/CSS</p>
+      </div>
+      <div class="skill-card">
+        <i class="fa-brands fa-js"></i>
+        <p>JavaScript</p>
+      </div>
+      <div class="skill-card">
+        <i class="fa-brands fa-github"></i>
+        <p>GitHub</p>
+      </div>
+      <div class="skill-card">
+        <i class="fa-solid fa-vr-cardboard"></i>
+        <p>XR / VR</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-img">🥽</div>
+      <div class="project-info">
+        <h3>국방 XR 시뮬레이션</h3>
+        <p>XR 기술을 활용한 국방 훈련 시뮬레이션 프로젝트. 실전과 유사한 가상 환경을 구현했습니다.</p>
+        <span class="tag">Unity</span>
+        <span class="tag">XR</span>
+        <span class="tag">C#</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-img">💻</div>
+      <div class="project-info">
+        <h3>포트폴리오 웹사이트</h3>
+        <p>GitHub Pages를 활용해 개인 포트폴리오 웹사이트를 직접 제작하고 배포했습니다.</p>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">GitHub</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-img">🤖</div>
+      <div class="project-info">
+        <h3>AI 활용 프로젝트</h3>
+        <p>Python과 AI를 활용한 데이터 분석 및 자동화 프로젝트를 진행했습니다.</p>
+        <span class="tag">Python</span>
+        <span class="tag">AI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background: #f5f7fa; max-width: 100%; padding: 5rem 2rem;">
+  <div style="max-width: 900px; margin: 0 auto;">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-box">
+      <p>궁금한 점이 있거나 함께 프로젝트를 진행하고 싶다면<br>아래로 연락주세요!</p>
+      <div class="contact-links">
+        <a href="mailto:janghamin07@email.com">
+          <i class="fa-solid fa-envelope"></i> 이메일
+        </a>
+        <a href="https://github.com/janghamin07" target="_blank">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 장하민. All rights reserved.</p>
+=======
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>장하민 | 국방XR학부</title>
@@ -167,6 +611,7 @@
 
 <footer>
     <p>&copy; 2025 장하민. All rights reserved.</p>
+>>>>>>> 53e7588eb86e9f17c6e1e1bfcfea65a41cfb5319
 </footer>
 
 </body>
